@@ -125,7 +125,8 @@ ORDER BY cohort_month, months_since_first_purchase;
 
 
 
-<img width="966" height="666" alt="Screenshot 2026-08-09 023552" src="https://github.com/user-attachments/assets/d0128cce-b44c-4e35-909d-db856d763497" />
+![Sales Dashboard](images/dashboard.png)
+
 
 
 
