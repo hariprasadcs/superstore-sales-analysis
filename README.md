@@ -121,6 +121,17 @@ cohort_retention AS (
 SELECT * FROM cohort_retention
 ORDER BY cohort_month, months_since_first_purchase;
 ```
+## Data Cleaning & Preparation (Power Query)
+
+The raw CSV was first cleaned in MySQL (inconsistent date formats fixed; no missing values or duplicates found). The cleaned file was then loaded into Excel Power Query:
+
+| Step | Action | Purpose |
+|------|--------|---------|
+| Source | Connected to the cleaned Superstore data | Load 9,994 rows × 21 columns |
+| Promoted Headers | First row used as column names | Proper field names |
+| Changed Type | `sales`, `discount`, `profit` → decimal; `quantity` → whole number; `order_date`, `ship_date` text → Date | Enable time grouping (year, month) and correct aggregation |
+
+**Data quality check:** column profiling on the entire dataset showed 0% errors and 0% empty values in all 21 columns before building the PivotTables.
 ## Dashboard
 
 
